@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>새 글 작성</title>
+</head>
+<body>
+<h1>새 글 작성</h1>
+
+<form action="/posts/create" method="post">
+    <label for="subject">제목:</label>
+    <input type="text" id="subject" name="subject" required>
+    <br>
+    <label for="content">내용:</label>
+    <textarea id="content" name="content" rows="4" required></textarea>
+    <br>
+    <label for="written">작성일:</label>
+    <input type="text" id="written" name="written" value="2025-05-14" required>
+    <br>
+    <button type="submit">작성</button>
+</form>
+
+<a href="/posts">목록으로 돌아가기</a>
+</body>
+</html>
