@@ -9,6 +9,7 @@
 <h1 th:text="${post.subject}">제목</h1>
 <p th:text="${post.content}">내용</p>
 <p th:text="'작성일: ' + ${post.written}">작성일</p>
+<p th:text="'작성일: ' + ${post.writer}">작성자</p>
 
 <a href="/posts">목록으로 돌아가기</a>
 <form th:action="@{/posts/delete/{id}(id=${post.id})}" method="post">

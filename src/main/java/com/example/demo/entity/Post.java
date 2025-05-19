@@ -16,4 +16,5 @@ public class Post {
     private String subject;
     private String content;
     private String written;
+    private String writer;
 }

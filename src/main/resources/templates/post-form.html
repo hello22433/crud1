@@ -16,11 +16,28 @@
     <textarea id="content" name="content" rows="4" required></textarea>
     <br>
     <label for="written">작성일:</label>
-    <input type="text" id="written" name="written" value="2025-05-14" required>
+    <input type="text" id="written" name="written" required>
+    <br>
+    <label for="writer">작성자:</label>
+    <input type="text" id="writer" name="writer" value="김보슬" required>
     <br>
     <button type="submit">작성</button>
 </form>
 
 <a href="/posts">목록으로 돌아가기</a>
+
+<script>
+    // 오늘 날짜를 yyyy-mm-dd 형식으로 반환하는 함수
+    function getTodayDate() {
+        const today = new Date();
+        const year = today.getFullYear();
+        const month = String(today.getMonth() + 1).padStart(2, '0');
+        const day = String(today.getDate()).padStart(2, '0');
+        return `${year}-${month}-${day}`;
+    }
+
+    // 페이지 로드 시 작성일 input에 자동으로 오늘 날짜 삽입
+    document.getElementById('written').value = getTodayDate();
+</script>
 </body>
 </html>

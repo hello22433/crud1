@@ -16,6 +16,7 @@
         <th>번호</th>
         <th>제목</th>
         <th>작성일</th>
+        <th>작성자</th>
         <th>삭제</th>
     </tr>
     </thead>
@@ -24,6 +25,7 @@
         <td th:text="${post.id}"></td>
         <td><a th:href="@{/posts/{id}(id=${post.id})}" th:text="${post.subject}"></a></td>
         <td th:text="${post.written}"></td>
+        <td th:text="${post.writer}"></td>
         <td>
             <form th:action="@{/posts/delete/{id}(id=${post.id})}" method="post">
                 <button type="submit">삭제</button>
